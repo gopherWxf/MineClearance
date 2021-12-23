@@ -7,15 +7,15 @@ import java.awt.*;
 工具类，存放静态参数
  */
 public class GameUtil {
-    static int MAP_W = 11;//地图宽
-    static int MAP_H = 11;//地图高
+    static int MAP_W = 36;//地图宽
+    static int MAP_H = 36;//地图高
     static int OFFSET = 45;//偏移量
     static int LatticeSideLength = 50;//格子边长
     static int[][] MAP_Mine = new int[MAP_W + 2][MAP_H + 2];//地雷元素含义-1雷 0空 1-8对应的数字
     //载入地雷图片
     static Image lei = Toolkit.getDefaultToolkit().getImage("images/lei.png");
     //地雷个数
-    static int Mine_Max = 5;
+    static int Mine_Max = 100;
     //载入数字图片
     static Image[] nums = new Image[9];
 
@@ -36,8 +36,8 @@ public class GameUtil {
     static int MOUSE_Y;
     static boolean MOUSE_LEFT;
     static boolean MOUSE_RIGHT;
-    //游戏状态 0游戏中，1胜利，2失败
-    static int state = 0;
+    //游戏状态 0游戏中，1胜利，2失败,3游戏选择
+    static int state = 3;
     //载入游戏状态图片
     static Image face = Toolkit.getDefaultToolkit().getImage("images/face.png");
     static Image win = Toolkit.getDefaultToolkit().getImage("images/win.png");
@@ -55,4 +55,7 @@ public class GameUtil {
     //倒计时
     static long START_TIME = 0;
     static long END_TIME = 0;
+    //游戏难度
+    static int level = 0;
+
 }

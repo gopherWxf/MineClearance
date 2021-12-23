@@ -5,7 +5,7 @@ package com.sxt;
  */
 public class GenerateMine {
     //存放坐标
-    int[] mines = new int[GameUtil.Mine_Max * 2];
+    static   int[] mines = new int[GameUtil.Mine_Max * 2];
     //地雷坐标
     int x, y;
     //是否放置 true可放
