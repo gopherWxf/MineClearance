@@ -31,5 +31,10 @@ public class GameUtil {
     static Image top = Toolkit.getDefaultToolkit().getImage("images/top.gif");
     static Image flag = Toolkit.getDefaultToolkit().getImage("images/flag.gif");
     static Image noflag = Toolkit.getDefaultToolkit().getImage("images/noflag.gif");
+    //鼠标参数
+    static int MOUSE_X;
+    static int MOUSE_Y;
+    static boolean MOUSE_LEFT;
+    static boolean MOUSE_RIGHT;
 
 }

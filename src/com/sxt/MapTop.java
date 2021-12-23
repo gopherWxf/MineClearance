@@ -6,8 +6,25 @@ package com.sxt;
 import java.awt.*;
 
 public class MapTop {
-    //绘制地图网格
+
+    //判断鼠标逻辑
+    void logic() {
+        if (GameUtil.MOUSE_LEFT == true) {
+            System.out.println(GameUtil.MOUSE_X);
+            System.out.println(GameUtil.MOUSE_Y);
+            GameUtil.MOUSE_LEFT = false;
+        }
+        if (GameUtil.MOUSE_RIGHT == true) {
+            System.out.println(GameUtil.MOUSE_X);
+            System.out.println(GameUtil.MOUSE_Y);
+            GameUtil.MOUSE_RIGHT = false;
+        }
+    }
+
+
+    //绘制上层
     void paintSelf(Graphics graphics) {
+        logic();
         //画覆盖
         for (int i = 1; i <= GameUtil.MAP_W; i++) {
             for (int j = 1; j <= GameUtil.MAP_H; j++) {
