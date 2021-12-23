@@ -1,11 +1,6 @@
-package com.sxt;
-
-/*
-初始化地雷
- */
-public class GenerateMine {
+public class MakeMines {
     //存放坐标
-    static   int[] mines = new int[GameUtil.Mine_Max * 2];
+    static int[] mines = new int[GameUtil.Mine_Max * 2];
     //地雷坐标
     int x, y;
     //是否放置 true可放
@@ -32,7 +27,7 @@ public class GenerateMine {
             isPlace = true;
         }
         for (int i = 0; i < GameUtil.Mine_Max * 2; i += 2) {
-            GameUtil.MAP_Mine[mines[i]][mines[i + 1]] = -1;
+            GameUtil.BottomData[mines[i]][mines[i + 1]] = -1;
         }
     }
 }

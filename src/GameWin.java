@@ -1,17 +1,15 @@
-package com.sxt;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class GameWin extends JFrame {
-    MapBottom mapBottom = new MapBottom();
-    MapTop mapTop = new MapTop();
+    ScreenBottom mapBottom = new ScreenBottom();
+    ScreenTop mapTop = new ScreenTop();
     GameSelect gameSelect = new GameSelect();
     boolean begin = false;
-    int windWight = 2 * GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LatticeSideLength;
-    int windHeight = 4 * GameUtil.OFFSET + GameUtil.MAP_H * GameUtil.LatticeSideLength;
+    int windWight = 2 * GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LATTICE;
+    int windHeight = 4 * GameUtil.OFFSET + GameUtil.MAP_H * GameUtil.LATTICE;
 
     Image ScreenCache = null;
 
@@ -50,10 +48,10 @@ public class GameWin extends JFrame {
                     case 1:
                     case 2:
                         if (e.getButton() == 1) {
-                            if (e.getX() > GameUtil.OFFSET + GameUtil.LatticeSideLength * GameUtil.MAP_W / 2
-                                    && e.getX() < GameUtil.OFFSET + GameUtil.LatticeSideLength * GameUtil.MAP_W / 2 + GameUtil.LatticeSideLength
+                            if (e.getX() > GameUtil.OFFSET + GameUtil.LATTICE * GameUtil.MAP_W / 2
+                                    && e.getX() < GameUtil.OFFSET + GameUtil.LATTICE * GameUtil.MAP_W / 2 + GameUtil.LATTICE
                                     && e.getY() > GameUtil.OFFSET
-                                    && e.getY() < GameUtil.OFFSET + GameUtil.LatticeSideLength) {
+                                    && e.getY() < GameUtil.OFFSET + GameUtil.LATTICE) {
                                 mapBottom.reGame();
                                 mapTop.reGame();
                                 GameUtil.state = 0;
@@ -70,7 +68,6 @@ public class GameWin extends JFrame {
                         }
                         break;
                 }
-
             }
         });
         //实时绘制
@@ -110,10 +107,5 @@ public class GameWin extends JFrame {
             mapTop.paintSelf(gScreen);
             graphics.drawImage(ScreenCache, 0, 0, null);
         }
-    }
-
-    public static void main(String[] args) {
-        GameWin gameWin = new GameWin();
-        gameWin.launch();
     }
 }

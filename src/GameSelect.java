@@ -1,5 +1,3 @@
-package com.sxt;
-
 import java.awt.*;
 
 public class GameSelect {
@@ -51,7 +49,6 @@ public class GameSelect {
                 GameUtil.MAP_W = 30;
                 GameUtil.MAP_H = 16;
                 break;
-
         }
     }
 }
