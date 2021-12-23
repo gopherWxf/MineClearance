@@ -9,6 +9,8 @@ public class GameWin extends JFrame {
     int windWight = 2 * GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LatticeSideLength;
     int windHeight = 4 * GameUtil.OFFSET + GameUtil.MAP_H * GameUtil.LatticeSideLength;
 
+    Image ScreenCache = null;
+
     void launch() {
         this.setVisible(true);//设置窗口可见
         this.setSize(windWight, windHeight);//设置窗口大小
@@ -28,8 +30,11 @@ public class GameWin extends JFrame {
 
     @Override
     public void paint(Graphics graphics) {
-        mapBottom.paintSelf(graphics);
-        mapTop.paintSelf(graphics);
+        ScreenCache = this.createImage(windWight, windHeight);
+        Graphics gScreen = ScreenCache.getGraphics();
+        mapBottom.paintSelf(gScreen);
+        mapTop.paintSelf(gScreen);
+        graphics.drawImage(ScreenCache, 0, 0, null);
     }
 
     public static void main(String[] args) {
