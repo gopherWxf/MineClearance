@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class GameWin extends JFrame {
     MapBottom mapBottom = new MapBottom();
+    MapTop mapTop = new MapTop();
     int windWight = 2 * GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LatticeSideLength;
     int windHeight = 4 * GameUtil.OFFSET + GameUtil.MAP_H * GameUtil.LatticeSideLength;
 
@@ -28,6 +29,7 @@ public class GameWin extends JFrame {
     @Override
     public void paint(Graphics graphics) {
         mapBottom.paintSelf(graphics);
+        mapTop.paintSelf(graphics);
     }
 
     public static void main(String[] args) {

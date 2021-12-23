@@ -24,4 +24,12 @@ public class GameUtil {
             nums[i] = Toolkit.getDefaultToolkit().getImage("images/num/" + i + ".png");
         }
     }
+
+    //顶层界面
+    static int[][] MAP_Top = new int[MAP_W + 2][MAP_H + 2];//-1无覆盖，0覆盖，1插旗，2插错旗
+    //载入顶层的图片
+    static Image top = Toolkit.getDefaultToolkit().getImage("images/top.gif");
+    static Image flag = Toolkit.getDefaultToolkit().getImage("images/flag.gif");
+    static Image noflag = Toolkit.getDefaultToolkit().getImage("images/noflag.gif");
+
 }
