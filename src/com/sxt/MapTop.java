@@ -44,7 +44,7 @@ public class MapTop {
                 GameUtil.MOUSE_RIGHT = false;
             }
         }
-
+        boom();
     }
 
 
@@ -128,6 +128,35 @@ public class MapTop {
                             spaceOpen(i, j);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    //失败判定 true失败
+    boolean boom() {
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                if (GameUtil.MAP_Mine[i][j] == -1 && GameUtil.MAP_Top[i][j] == -1) {
+                    seeBoom();
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    //显示雷区所有雷
+    void seeBoom() {
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                //是雷，但是有覆盖，则直接显示
+                if (GameUtil.MAP_Mine[i][j] == -1 && GameUtil.MAP_Top[i][j] != -1) {
+                    GameUtil.MAP_Top[i][j] = -1;
+                }
+                //不是雷，但是有旗，显示插错旗
+                if (GameUtil.MAP_Mine[i][j] != -1 && GameUtil.MAP_Top[i][j] == 1) {
+                    GameUtil.MAP_Top[i][j] = 2;
                 }
             }
         }

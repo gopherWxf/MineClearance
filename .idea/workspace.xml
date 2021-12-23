@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="右键插旗">
+    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="右键翻开">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxt/MapTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxt/MapTop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640249467956</updated>
-      <workItem from="1640249469150" duration="9144000" />
+      <workItem from="1640249469150" duration="9785000" />
     </task>
     <task id="LOCAL-00001" summary="窗口绘制">
       <created>1640249864764</created>
@@ -174,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640260307306</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="右键翻开">
+      <created>1640260700267</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1640260700267</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +213,7 @@
     <MESSAGE value="左键翻开" />
     <MESSAGE value="递归翻开空白区域" />
     <MESSAGE value="右键插旗" />
-    <option name="LAST_COMMIT_MESSAGE" value="右键插旗" />
+    <MESSAGE value="右键翻开" />
+    <option name="LAST_COMMIT_MESSAGE" value="右键翻开" />
   </component>
 </project>
