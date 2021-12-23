@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="界面规划">
-      <change afterPath="$PROJECT_DIR$/images/face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/flag.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/lei.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/noflag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/num/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/top.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/win.png" afterDir="false" />
+    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="绘制地雷">
+      <change afterPath="$PROJECT_DIR$/src/com/sxt/GenerateMine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxt/GameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxt/GameUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxt/MapBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxt/MapBottom.java" afterDir="false" />
@@ -83,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640249467956</updated>
-      <workItem from="1640249469150" duration="2738000" />
+      <workItem from="1640249469150" duration="3164000" />
     </task>
     <task id="LOCAL-00001" summary="窗口绘制">
       <created>1640249864764</created>
@@ -113,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640250922373</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="绘制地雷">
+      <created>1640252264336</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640252264336</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +127,7 @@
     <MESSAGE value="窗口绘制" />
     <MESSAGE value="网格绘制" />
     <MESSAGE value="界面规划" />
-    <option name="LAST_COMMIT_MESSAGE" value="界面规划" />
+    <MESSAGE value="绘制地雷" />
+    <option name="LAST_COMMIT_MESSAGE" value="绘制地雷" />
   </component>
 </project>
