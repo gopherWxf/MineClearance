@@ -36,5 +36,11 @@ public class GameUtil {
     static int MOUSE_Y;
     static boolean MOUSE_LEFT;
     static boolean MOUSE_RIGHT;
+    //游戏状态 0游戏中，1胜利，2失败
+    static int state = 0;
+    //载入游戏状态图片
+    static Image face = Toolkit.getDefaultToolkit().getImage("images/face.png");
+    static Image win = Toolkit.getDefaultToolkit().getImage("images/win.png");
+    static Image over = Toolkit.getDefaultToolkit().getImage("images/over.png");
 
 }
