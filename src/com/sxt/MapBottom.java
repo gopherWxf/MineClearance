@@ -59,8 +59,22 @@ public class MapBottom {
                 }
             }
         }
+        //绘制剩余雷数
+        GameUtil.drawWord(graphics,
+                "剩余雷数:" + (GameUtil.Mine_Max - GameUtil.FLAG_NUM) + "个",
+                GameUtil.OFFSET,
+                2 * GameUtil.OFFSET,
+                20, Color.red);
+        //绘制倒计时
+        GameUtil.drawWord(graphics,
+                "开始扫雷:" + (GameUtil.END_TIME - GameUtil.START_TIME) / 1000 + "秒",
+                GameUtil.OFFSET + GameUtil.LatticeSideLength * (GameUtil.MAP_W - 4),
+                2 * GameUtil.OFFSET,
+                20, Color.red);
+        //游戏状态图片显示
         switch (GameUtil.state) {
             case 0:
+                GameUtil.END_TIME = System.currentTimeMillis();
                 graphics.drawImage(GameUtil.face,
                         GameUtil.OFFSET + GameUtil.LatticeSideLength * GameUtil.MAP_W / 2,
                         GameUtil.OFFSET,

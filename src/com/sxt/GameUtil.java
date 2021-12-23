@@ -42,5 +42,17 @@ public class GameUtil {
     static Image face = Toolkit.getDefaultToolkit().getImage("images/face.png");
     static Image win = Toolkit.getDefaultToolkit().getImage("images/win.png");
     static Image over = Toolkit.getDefaultToolkit().getImage("images/over.png");
+    //旗数量
+    static int FLAG_NUM = 0;
 
+    //绘制文字
+    static void drawWord(Graphics graphics, String str, int x, int y, int size, Color color) {
+        graphics.setColor(color);
+        graphics.setFont(new Font("宋体", Font.BOLD, size));
+        graphics.drawString(str, x, y);
+    }
+
+    //倒计时
+    static long START_TIME = 0;
+    static long END_TIME = 0;
 }

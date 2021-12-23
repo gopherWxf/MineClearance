@@ -20,7 +20,7 @@ public class MapTop {
         }
         if (temp_x >= 1 && temp_x <= GameUtil.MAP_W
                 && temp_y >= 1 && temp_y <= GameUtil.MAP_H) {
-            if (GameUtil.MOUSE_LEFT == true) {
+            if (GameUtil.MOUSE_LEFT) {
                 //覆盖，则翻开
                 if (GameUtil.MAP_Top[temp_x][temp_y] == 0) {
                     GameUtil.MAP_Top[temp_x][temp_y] = -1;
@@ -28,14 +28,16 @@ public class MapTop {
                 GameUtil.MOUSE_LEFT = false;
                 spaceOpen(temp_x, temp_y);
             }
-            if (GameUtil.MOUSE_RIGHT == true) {
+            if (GameUtil.MOUSE_RIGHT) {
                 //覆盖则插旗
                 if (GameUtil.MAP_Top[temp_x][temp_y] == 0) {
                     GameUtil.MAP_Top[temp_x][temp_y] = 1;
+                    GameUtil.FLAG_NUM++;
                 }
                 //插旗则取消
                 else if (GameUtil.MAP_Top[temp_x][temp_y] == 1) {
                     GameUtil.MAP_Top[temp_x][temp_y] = 0;
+                    GameUtil.FLAG_NUM--;
                 }
                 //数字则进行判断
                 else if (GameUtil.MAP_Top[temp_x][temp_y] == -1) {
@@ -97,6 +99,9 @@ public class MapTop {
                 for (int j = y - 1; j <= y + 1; j++) {
                     //覆盖才递归
                     if (GameUtil.MAP_Top[i][j] != -1) {
+                        if (GameUtil.MAP_Top[i][j] == 1) {
+                            GameUtil.FLAG_NUM--;
+                        }
                         GameUtil.MAP_Top[i][j] = -1;
                         //必须在雷区当中
                         if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
@@ -136,6 +141,15 @@ public class MapTop {
 
     //失败判定 true失败
     boolean boom() {
+        if (GameUtil.FLAG_NUM == GameUtil.Mine_Max) {
+            for (int i = 1; i <= GameUtil.MAP_W; i++) {
+                for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                    if (GameUtil.MAP_Mine[i][j] == 0) {
+                        GameUtil.MAP_Top[i][j] = -1;
+                    }
+                }
+            }
+        }
         for (int i = 1; i <= GameUtil.MAP_W; i++) {
             for (int j = 1; j <= GameUtil.MAP_H; j++) {
                 if (GameUtil.MAP_Mine[i][j] == -1 && GameUtil.MAP_Top[i][j] == -1) {

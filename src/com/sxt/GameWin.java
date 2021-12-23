@@ -14,6 +14,7 @@ public class GameWin extends JFrame {
     Image ScreenCache = null;
 
     void launch() {
+        GameUtil.START_TIME = System.currentTimeMillis();
         this.setVisible(true);//设置窗口可见
         this.setSize(windWight, windHeight);//设置窗口大小
         this.setLocationRelativeTo(null);//设置窗口位置（居中）
@@ -46,6 +47,8 @@ public class GameWin extends JFrame {
                                 mapBottom.reGame();
                                 mapTop.reGame();
                                 GameUtil.state = 0;
+                                GameUtil.FLAG_NUM = 0;
+                                GameUtil.START_TIME = System.currentTimeMillis();
                             }
                         }
                         break;
