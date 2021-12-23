@@ -14,5 +14,5 @@ public class GameUtil {
     //载入图片
     static Image lei = Toolkit.getDefaultToolkit().getImage("images/lei.png");
     //地雷个数
-    static int Mine_Max = 5;
+    static int Mine_Max = 121;
 }

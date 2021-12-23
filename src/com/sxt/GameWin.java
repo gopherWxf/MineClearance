@@ -14,6 +14,15 @@ public class GameWin extends JFrame {
         this.setLocationRelativeTo(null);//设置窗口位置（居中）
         this.setTitle("扫雷");//设置窗口标题
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);//设置关闭窗口
+        //实时绘制
+        while (true) {
+            repaint();
+            try {
+                Thread.sleep(40);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override

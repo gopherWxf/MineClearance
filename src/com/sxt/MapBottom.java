@@ -29,12 +29,12 @@ public class MapBottom {
             );
         }
         //画地雷
-        for (int i = 0; i < GameUtil.MAP_W; i++) {
-            for (int j = 0; j < GameUtil.MAP_H; j++) {
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
                 if (GameUtil.MAP_Mine[i][j] == -1) {
                     graphics.drawImage(GameUtil.lei,
-                            GameUtil.OFFSET + i * GameUtil.LatticeSideLength + 1,
-                            GameUtil.OFFSET * 3 + j * GameUtil.LatticeSideLength + 1,
+                            GameUtil.OFFSET + (i - 1) * GameUtil.LatticeSideLength + 1,
+                            GameUtil.OFFSET * 3 + (j - 1) * GameUtil.LatticeSideLength + 1,
                             GameUtil.LatticeSideLength - 2,
                             GameUtil.LatticeSideLength - 2,
                             null
