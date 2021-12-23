@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="窗口绘制">
-      <change afterPath="$PROJECT_DIR$/src/com/sxt/MapBottom.java" afterDir="false" />
+    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="网格绘制">
+      <change afterPath="$PROJECT_DIR$/src/com/sxt/GameUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MineClearance/com/sxt/GameWin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/com/sxt/GameWin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxt/GameWin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxt/GameWin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxt/MapBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxt/MapBottom.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640249467956</updated>
-      <workItem from="1640249469150" duration="593000" />
+      <workItem from="1640249469150" duration="1394000" />
     </task>
     <task id="LOCAL-00001" summary="窗口绘制">
       <created>1640249864764</created>
@@ -79,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640249872128</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="网格绘制">
+      <created>1640250223109</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640250223109</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="窗口绘制" />
-    <option name="LAST_COMMIT_MESSAGE" value="窗口绘制" />
+    <MESSAGE value="网格绘制" />
+    <option name="LAST_COMMIT_MESSAGE" value="网格绘制" />
   </component>
 </project>
