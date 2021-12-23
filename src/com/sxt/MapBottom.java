@@ -20,10 +20,22 @@ public class MapBottom {
         //画横线
         for (int i = 0; i <= GameUtil.MAP_H; i++) {
             graphics.drawLine(GameUtil.OFFSET,
-                    3 * GameUtil.OFFSET + i* GameUtil.LatticeSideLength,
+                    3 * GameUtil.OFFSET + i * GameUtil.LatticeSideLength,
                     GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LatticeSideLength,
                     3 * GameUtil.OFFSET + i * GameUtil.LatticeSideLength
             );
+        }
+        //画地雷
+        for (int i = 0; i < GameUtil.MAP_W; i++) {
+            for (int j = 0; j < GameUtil.MAP_H; j++) {
+                graphics.drawImage(GameUtil.lei,
+                        GameUtil.OFFSET + i * GameUtil.LatticeSideLength + 1,
+                        GameUtil.OFFSET * 3 + j * GameUtil.LatticeSideLength + 1,
+                        GameUtil.LatticeSideLength - 2,
+                        GameUtil.LatticeSideLength - 2,
+                        null
+                );
+            }
         }
     }
 }
