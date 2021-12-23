@@ -37,6 +37,10 @@ public class MapTop {
                 else if (GameUtil.MAP_Top[temp_x][temp_y] == 1) {
                     GameUtil.MAP_Top[temp_x][temp_y] = 0;
                 }
+                //数字则进行判断
+                else if (GameUtil.MAP_Top[temp_x][temp_y] == -1) {
+                    numOpen(temp_x, temp_y);
+                }
                 GameUtil.MOUSE_RIGHT = false;
             }
         }
@@ -94,6 +98,32 @@ public class MapTop {
                     if (GameUtil.MAP_Top[i][j] != -1) {
                         GameUtil.MAP_Top[i][j] = -1;
                         //必须在雷区当中
+                        if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
+                            spaceOpen(i, j);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //数字翻开
+    void numOpen(int x, int y) {
+        int count = 0;//记录旗子数字
+        if (GameUtil.MAP_Mine[x][y] > 0) {
+            for (int i = x - 1; i <= x + 1; i++) {
+                for (int j = y - 1; j <= y + 1; j++) {
+                    if (GameUtil.MAP_Top[i][j] == 1) {
+                        count++;
+                    }
+                }
+            }
+            if (count == GameUtil.MAP_Mine[x][y]) {
+                for (int i = x - 1; i <= x + 1; i++) {
+                    for (int j = y - 1; j <= y + 1; j++) {
+                        if (GameUtil.MAP_Top[i][j] != 1) {
+                            GameUtil.MAP_Top[i][j] = -1;
+                        }
                         if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
                             spaceOpen(i, j);
                         }
