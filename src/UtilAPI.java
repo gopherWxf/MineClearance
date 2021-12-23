@@ -58,7 +58,6 @@ public class UtilAPI {
             BufferedReader in = new BufferedReader(new FileReader("Rank/rank.txt"));
             String s, s1 = new String();
             s = in.readLine();
-            System.out.println(s);
             in.close();
             return Integer.valueOf(s).intValue();
         } catch (Exception e) {

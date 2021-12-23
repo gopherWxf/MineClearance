@@ -204,6 +204,7 @@ public class ScreenTop {
 
     //重置游戏
     void reGame() {
+
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 UtilVar.TopData[i][j] = 0;
