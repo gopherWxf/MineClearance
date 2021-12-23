@@ -9,36 +9,36 @@ public class ScreenTop {
     void logic() {
         temp_x = 0;
         temp_y = 0;
-        if (GameUtil.MOUSE_X > GameUtil.OFFSET && GameUtil.MOUSE_Y > 3 * GameUtil.OFFSET) {
-            temp_x = (GameUtil.MOUSE_X - GameUtil.OFFSET) / GameUtil.LATTICE + 1;
-            temp_y = (GameUtil.MOUSE_Y - 3 * GameUtil.OFFSET) / GameUtil.LATTICE + 1;
+        if (UtilVar.MOUSE_X > UtilVar.OFFSET && UtilVar.MOUSE_Y > 3 * UtilVar.OFFSET) {
+            temp_x = (UtilVar.MOUSE_X - UtilVar.OFFSET) / UtilVar.LATTICE + 1;
+            temp_y = (UtilVar.MOUSE_Y - 3 * UtilVar.OFFSET) / UtilVar.LATTICE + 1;
         }
-        if (temp_x >= 1 && temp_x <= GameUtil.MAP_W
-                && temp_y >= 1 && temp_y <= GameUtil.MAP_H) {
-            if (GameUtil.MOUSE_LEFT) {
+        if (temp_x >= 1 && temp_x <= UtilVar.MAP_W
+                && temp_y >= 1 && temp_y <= UtilVar.MAP_H) {
+            if (UtilVar.MOUSE_LEFT) {
                 //覆盖，则翻开
-                if (GameUtil.TopData[temp_x][temp_y] == 0) {
-                    GameUtil.TopData[temp_x][temp_y] = -1;
+                if (UtilVar.TopData[temp_x][temp_y] == 0) {
+                    UtilVar.TopData[temp_x][temp_y] = -1;
                 }
-                GameUtil.MOUSE_LEFT = false;
+                UtilVar.MOUSE_LEFT = false;
                 spaceOpen(temp_x, temp_y);
             }
-            if (GameUtil.MOUSE_RIGHT) {
+            if (UtilVar.MOUSE_RIGHT) {
                 //覆盖则插旗
-                if (GameUtil.TopData[temp_x][temp_y] == 0) {
-                    GameUtil.TopData[temp_x][temp_y] = 1;
-                    GameUtil.FLAG_NUM++;
+                if (UtilVar.TopData[temp_x][temp_y] == 0) {
+                    UtilVar.TopData[temp_x][temp_y] = 1;
+                    UtilVar.FLAG_NUM++;
                 }
                 //插旗则取消
-                else if (GameUtil.TopData[temp_x][temp_y] == 1) {
-                    GameUtil.TopData[temp_x][temp_y] = 0;
-                    GameUtil.FLAG_NUM--;
+                else if (UtilVar.TopData[temp_x][temp_y] == 1) {
+                    UtilVar.TopData[temp_x][temp_y] = 0;
+                    UtilVar.FLAG_NUM--;
                 }
                 //数字则进行判断
-                else if (GameUtil.TopData[temp_x][temp_y] == -1) {
+                else if (UtilVar.TopData[temp_x][temp_y] == -1) {
                     numOpen(temp_x, temp_y);
                 }
-                GameUtil.MOUSE_RIGHT = false;
+                UtilVar.MOUSE_RIGHT = false;
             }
         }
         boom();
@@ -50,35 +50,35 @@ public class ScreenTop {
     void paintSelf(Graphics graphics) {
         logic();
         //画覆盖
-        for (int i = 1; i <= GameUtil.MAP_W; i++) {
-            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+        for (int i = 1; i <= UtilVar.MAP_W; i++) {
+            for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 //有覆盖
-                if (GameUtil.TopData[i][j] == 0) {
-                    graphics.drawImage(GameUtil.top,
-                            GameUtil.OFFSET + (i - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.OFFSET * 3 + (j - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.LATTICE - 2,
-                            GameUtil.LATTICE - 2,
+                if (UtilVar.TopData[i][j] == 0) {
+                    graphics.drawImage(UtilVar.top,
+                            UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.OFFSET * 3 + (j - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.LATTICE - 2,
+                            UtilVar.LATTICE - 2,
                             null
                     );
                 }
                 //插旗
-                if (GameUtil.TopData[i][j] == 1) {
-                    graphics.drawImage(GameUtil.flag,
-                            GameUtil.OFFSET + (i - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.OFFSET * 3 + (j - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.LATTICE - 2,
-                            GameUtil.LATTICE - 2,
+                if (UtilVar.TopData[i][j] == 1) {
+                    graphics.drawImage(UtilVar.flag,
+                            UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.OFFSET * 3 + (j - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.LATTICE - 2,
+                            UtilVar.LATTICE - 2,
                             null
                     );
                 }
                 //插错旗
-                if (GameUtil.TopData[i][j] == 2) {
-                    graphics.drawImage(GameUtil.noflag,
-                            GameUtil.OFFSET + (i - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.OFFSET * 3 + (j - 1) * GameUtil.LATTICE + 1,
-                            GameUtil.LATTICE - 2,
-                            GameUtil.LATTICE - 2,
+                if (UtilVar.TopData[i][j] == 2) {
+                    graphics.drawImage(UtilVar.noflag,
+                            UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.OFFSET * 3 + (j - 1) * UtilVar.LATTICE + 1,
+                            UtilVar.LATTICE - 2,
+                            UtilVar.LATTICE - 2,
                             null
                     );
                 }
@@ -89,17 +89,17 @@ public class ScreenTop {
 
     //打开空格
     void spaceOpen(int x, int y) {
-        if (GameUtil.BottomData[x][y] == 0) {
+        if (UtilVar.BottomData[x][y] == 0) {
             for (int i = x - 1; i <= x + 1; i++) {
                 for (int j = y - 1; j <= y + 1; j++) {
                     //覆盖才递归
-                    if (GameUtil.TopData[i][j] != -1) {
-                        if (GameUtil.TopData[i][j] == 1) {
-                            GameUtil.FLAG_NUM--;
+                    if (UtilVar.TopData[i][j] != -1) {
+                        if (UtilVar.TopData[i][j] == 1) {
+                            UtilVar.FLAG_NUM--;
                         }
-                        GameUtil.TopData[i][j] = -1;
+                        UtilVar.TopData[i][j] = -1;
                         //必须在雷区当中
-                        if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
+                        if (i >= 1 && j >= 1 && i < UtilVar.MAP_W && j <= UtilVar.MAP_H) {
                             spaceOpen(i, j);
                         }
                     }
@@ -111,21 +111,21 @@ public class ScreenTop {
     //数字翻开
     void numOpen(int x, int y) {
         int count = 0;//记录旗子数字
-        if (GameUtil.BottomData[x][y] > 0) {
+        if (UtilVar.BottomData[x][y] > 0) {
             for (int i = x - 1; i <= x + 1; i++) {
                 for (int j = y - 1; j <= y + 1; j++) {
-                    if (GameUtil.TopData[i][j] == 1) {
+                    if (UtilVar.TopData[i][j] == 1) {
                         count++;
                     }
                 }
             }
-            if (count == GameUtil.BottomData[x][y]) {
+            if (count == UtilVar.BottomData[x][y]) {
                 for (int i = x - 1; i <= x + 1; i++) {
                     for (int j = y - 1; j <= y + 1; j++) {
-                        if (GameUtil.TopData[i][j] != 1) {
-                            GameUtil.TopData[i][j] = -1;
+                        if (UtilVar.TopData[i][j] != 1) {
+                            UtilVar.TopData[i][j] = -1;
                         }
-                        if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
+                        if (i >= 1 && j >= 1 && i < UtilVar.MAP_W && j <= UtilVar.MAP_H) {
                             spaceOpen(i, j);
                         }
                     }
@@ -136,19 +136,19 @@ public class ScreenTop {
 
     //失败判定 true失败
     boolean boom() {
-        if (GameUtil.FLAG_NUM == GameUtil.Mine_Max) {
-            for (int i = 1; i <= GameUtil.MAP_W; i++) {
-                for (int j = 1; j <= GameUtil.MAP_H; j++) {
-                    if (GameUtil.BottomData[i][j] == 0) {
-                        GameUtil.TopData[i][j] = -1;
+        if (UtilVar.FLAG_NUM == UtilVar.Mine_Max) {
+            for (int i = 1; i <= UtilVar.MAP_W; i++) {
+                for (int j = 1; j <= UtilVar.MAP_H; j++) {
+                    if (UtilVar.BottomData[i][j] == 0) {
+                        UtilVar.TopData[i][j] = -1;
                     }
                 }
             }
         }
-        for (int i = 1; i <= GameUtil.MAP_W; i++) {
-            for (int j = 1; j <= GameUtil.MAP_H; j++) {
-                if (GameUtil.BottomData[i][j] == -1 && GameUtil.TopData[i][j] == -1) {
-                    GameUtil.state = 2;
+        for (int i = 1; i <= UtilVar.MAP_W; i++) {
+            for (int j = 1; j <= UtilVar.MAP_H; j++) {
+                if (UtilVar.BottomData[i][j] == -1 && UtilVar.TopData[i][j] == -1) {
+                    UtilVar.state = 2;
                     seeBoom();
                     return true;
                 }
@@ -159,15 +159,15 @@ public class ScreenTop {
 
     //显示雷区所有雷
     void seeBoom() {
-        for (int i = 1; i <= GameUtil.MAP_W; i++) {
-            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+        for (int i = 1; i <= UtilVar.MAP_W; i++) {
+            for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 //是雷，但是有覆盖，则直接显示
-                if (GameUtil.BottomData[i][j] == -1 && GameUtil.TopData[i][j] != -1) {
-                    GameUtil.TopData[i][j] = -1;
+                if (UtilVar.BottomData[i][j] == -1 && UtilVar.TopData[i][j] != -1) {
+                    UtilVar.TopData[i][j] = -1;
                 }
                 //不是雷，但是有旗，显示插错旗
-                if (GameUtil.BottomData[i][j] != -1 && GameUtil.TopData[i][j] == 1) {
-                    GameUtil.TopData[i][j] = 2;
+                if (UtilVar.BottomData[i][j] != -1 && UtilVar.TopData[i][j] == 1) {
+                    UtilVar.TopData[i][j] = 2;
                 }
             }
         }
@@ -176,21 +176,26 @@ public class ScreenTop {
     //胜利判断true胜利
     boolean victory() {
         int count = 0;//统计未打开格子数
-        for (int i = 1; i <= GameUtil.MAP_W; i++) {
-            for (int j = 1; j <= GameUtil.MAP_H; j++) {
-                if (GameUtil.TopData[i][j] != -1) {
+        for (int i = 1; i <= UtilVar.MAP_W; i++) {
+            for (int j = 1; j <= UtilVar.MAP_H; j++) {
+                if (UtilVar.TopData[i][j] != -1) {
                     count++;
                 }
             }
         }
-        if (count == GameUtil.Mine_Max) {
-            GameUtil.state = 1;
-            for (int i = 1; i <= GameUtil.MAP_W; i++) {
-                for (int j = 1; j <= GameUtil.MAP_H; j++) {
-                    if (GameUtil.TopData[i][j] == 0) {//未翻开的变成旗
-                        GameUtil.TopData[i][j] = 1;
+        if (count == UtilVar.Mine_Max) {
+            UtilVar.state = 1;
+            for (int i = 1; i <= UtilVar.MAP_W; i++) {
+                for (int j = 1; j <= UtilVar.MAP_H; j++) {
+                    if (UtilVar.TopData[i][j] == 0) {//未翻开的变成旗
+                        UtilVar.TopData[i][j] = 1;
                     }
                 }
+            }
+            int l = Math.toIntExact((UtilVar.END_TIME - UtilVar.START_TIME) / 1000);
+            int r = UtilAPI.readRank();
+            if (l < r) {
+                UtilAPI.setRank(String.valueOf(l));
             }
             return true;
         }
@@ -199,9 +204,9 @@ public class ScreenTop {
 
     //重置游戏
     void reGame() {
-        for (int i = 1; i <= GameUtil.MAP_W; i++) {
-            for (int j = 1; j <= GameUtil.MAP_H; j++) {
-                GameUtil.TopData[i][j] = 0;
+        for (int i = 1; i <= UtilVar.MAP_W; i++) {
+            for (int j = 1; j <= UtilVar.MAP_H; j++) {
+                UtilVar.TopData[i][j] = 0;
             }
         }
     }

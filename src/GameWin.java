@@ -6,18 +6,18 @@ import java.awt.event.MouseEvent;
 public class GameWin extends JFrame {
     ScreenBottom mapBottom = new ScreenBottom();
     ScreenTop mapTop = new ScreenTop();
-    GameSelect gameSelect = new GameSelect();
+    ScreenSelect gameSelect = new ScreenSelect();
     boolean begin = false;
-    int windWight = 2 * GameUtil.OFFSET + GameUtil.MAP_W * GameUtil.LATTICE;
-    int windHeight = 4 * GameUtil.OFFSET + GameUtil.MAP_H * GameUtil.LATTICE;
+    int windWight = 2 * UtilVar.OFFSET + UtilVar.MAP_W * UtilVar.LATTICE;
+    int windHeight = 4 * UtilVar.OFFSET + UtilVar.MAP_H * UtilVar.LATTICE;
 
     Image ScreenCache = null;
 
     void launch() {
-        GameUtil.START_TIME = System.currentTimeMillis();
+        UtilVar.START_TIME = System.currentTimeMillis();
         this.setVisible(true);//设置窗口可见
-        if (GameUtil.state == 3) {
-            this.setSize(500, 500);
+        if (UtilVar.state == 3) {
+            this.setSize(500, 650);
         } else {
             this.setSize(windWight, windHeight);//设置窗口大小
         }
@@ -29,41 +29,42 @@ public class GameWin extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                switch (GameUtil.state) {
+                switch (UtilVar.state) {
                     case 0:
                         if (e.getButton() == 1) {//左键点击
-                            GameUtil.MOUSE_X = e.getX();
-                            GameUtil.MOUSE_Y = e.getY();
-                            GameUtil.MOUSE_LEFT = true;
+                            UtilVar.MOUSE_X = e.getX();
+                            UtilVar.MOUSE_Y = e.getY();
+                            UtilVar.MOUSE_LEFT = true;
                         }
                         if (e.getButton() == 3) {//右键点击
-                            GameUtil.MOUSE_X = e.getX();
-                            GameUtil.MOUSE_Y = e.getY();
-                            GameUtil.MOUSE_RIGHT = true;
+                            UtilVar.MOUSE_X = e.getX();
+                            UtilVar.MOUSE_Y = e.getY();
+                            UtilVar.MOUSE_RIGHT = true;
                         }
                         if (e.getButton() == 2) {//滚轮
-                            GameUtil.state = 3;
+                            UtilVar.state = 3;
                             begin = true;
                         }
                     case 1:
                     case 2:
                         if (e.getButton() == 1) {
-                            if (e.getX() > GameUtil.OFFSET + GameUtil.LATTICE * GameUtil.MAP_W / 2
-                                    && e.getX() < GameUtil.OFFSET + GameUtil.LATTICE * GameUtil.MAP_W / 2 + GameUtil.LATTICE
-                                    && e.getY() > GameUtil.OFFSET
-                                    && e.getY() < GameUtil.OFFSET + GameUtil.LATTICE) {
+                            if (e.getX() > UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2
+                                    && e.getX() < UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2 + UtilVar.LATTICE
+                                    && e.getY() > UtilVar.OFFSET
+                                    && e.getY() < UtilVar.OFFSET + UtilVar.LATTICE) {
                                 mapBottom.reGame();
                                 mapTop.reGame();
-                                GameUtil.state = 0;
-                                GameUtil.FLAG_NUM = 0;
-                                GameUtil.START_TIME = System.currentTimeMillis();
+                                UtilVar.state = 0;
+                                UtilVar.FLAG_NUM = 0;
+                                UtilVar.voice=0;
+                                UtilVar.START_TIME = System.currentTimeMillis();
                             }
                         }
                         break;
                     case 3:
                         if (e.getButton() == 1) {//左键点击
-                            GameUtil.MOUSE_X = e.getX();
-                            GameUtil.MOUSE_Y = e.getY();
+                            UtilVar.MOUSE_X = e.getX();
+                            UtilVar.MOUSE_Y = e.getY();
                             begin = gameSelect.hard();
                         }
                         break;
@@ -85,11 +86,11 @@ public class GameWin extends JFrame {
     void begin() {
         if (begin) {
             begin = false;
-            gameSelect.hard(GameUtil.level);
+            gameSelect.hard(UtilVar.level);
             dispose();
             GameWin gameWin = new GameWin();
-            GameUtil.FLAG_NUM=0;
-            GameUtil.START_TIME = System.currentTimeMillis();
+            UtilVar.FLAG_NUM=0;
+            UtilVar.START_TIME = System.currentTimeMillis();
             mapTop.reGame();
             mapBottom.reGame();
             gameWin.launch();
@@ -98,7 +99,7 @@ public class GameWin extends JFrame {
 
     @Override
     public void paint(Graphics graphics) {
-        if (GameUtil.state == 3) {
+        if (UtilVar.state == 3) {
             gameSelect.paintSelf(graphics);
         } else {
             ScreenCache = this.createImage(windWight, windHeight);
