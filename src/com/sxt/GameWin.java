@@ -24,16 +24,33 @@ public class GameWin extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if (e.getButton() == 1) {//左键点击
-                    GameUtil.MOUSE_X = e.getX();
-                    GameUtil.MOUSE_Y = e.getY();
-                    GameUtil.MOUSE_LEFT = true;
+                switch (GameUtil.state) {
+                    case 0:
+                        if (e.getButton() == 1) {//左键点击
+                            GameUtil.MOUSE_X = e.getX();
+                            GameUtil.MOUSE_Y = e.getY();
+                            GameUtil.MOUSE_LEFT = true;
+                        }
+                        if (e.getButton() == 3) {//右键点击
+                            GameUtil.MOUSE_X = e.getX();
+                            GameUtil.MOUSE_Y = e.getY();
+                            GameUtil.MOUSE_RIGHT = true;
+                        }
+                    case 1:
+                    case 2:
+                        if (e.getButton() == 1) {
+                            if (e.getX() > GameUtil.OFFSET + GameUtil.LatticeSideLength * GameUtil.MAP_W / 2
+                                    && e.getX() < GameUtil.OFFSET + GameUtil.LatticeSideLength * GameUtil.MAP_W / 2 + GameUtil.LatticeSideLength
+                                    && e.getY() > GameUtil.OFFSET
+                                    && e.getY() < GameUtil.OFFSET + GameUtil.LatticeSideLength) {
+                                mapBottom.reGame();
+                                mapTop.reGame();
+                                GameUtil.state = 0;
+                            }
+                        }
+                        break;
                 }
-                if (e.getButton() == 3) {//右键点击
-                    GameUtil.MOUSE_X = e.getX();
-                    GameUtil.MOUSE_Y = e.getY();
-                    GameUtil.MOUSE_RIGHT = true;
-                }
+
             }
         });
         //实时绘制

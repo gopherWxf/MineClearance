@@ -11,7 +11,7 @@ public class GenerateMine {
     //是否放置 true可放
     boolean isPlace = true;
 
-    {
+    void newMine() {
         for (int i = 0; i < GameUtil.Mine_Max * 2; i += 2) {
             x = (int) (Math.random() * GameUtil.MAP_W + 1);
             y = (int) (Math.random() * GameUtil.MAP_H + 1);
@@ -34,7 +34,5 @@ public class GenerateMine {
         for (int i = 0; i < GameUtil.Mine_Max * 2; i += 2) {
             GameUtil.MAP_Mine[mines[i]][mines[i + 1]] = -1;
         }
-
     }
-
 }

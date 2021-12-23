@@ -187,4 +187,13 @@ public class MapTop {
         }
         return false;
     }
+
+    //重置游戏
+    void reGame() {
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                GameUtil.MAP_Top[i][j] = 0;
+            }
+        }
+    }
 }

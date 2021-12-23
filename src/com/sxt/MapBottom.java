@@ -11,6 +11,11 @@ public class MapBottom {
     //地雷对应的数字
     MapNum mapNum = new MapNum();
 
+    {
+        generateMine.newMine();
+        mapNum.newNum();
+    }
+
     //绘制地图网格
     void paintSelf(Graphics graphics) {
         //设置线条颜色
@@ -74,5 +79,16 @@ public class MapBottom {
                         null);
                 break;
         }
+    }
+
+    //重置游戏
+    void reGame() {
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                GameUtil.MAP_Mine[i][j] = 0;
+            }
+        }
+        generateMine.newMine();
+        mapNum.newNum();
     }
 }
