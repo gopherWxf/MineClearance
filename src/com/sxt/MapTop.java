@@ -25,6 +25,7 @@ public class MapTop {
                     GameUtil.MAP_Top[temp_x][temp_y] = -1;
                 }
                 GameUtil.MOUSE_LEFT = false;
+                spaceOpen(temp_x, temp_y);
             }
             if (GameUtil.MOUSE_RIGHT == true) {
                 System.out.println(GameUtil.MOUSE_X);
@@ -73,6 +74,24 @@ public class MapTop {
                     );
                 }
 
+            }
+        }
+    }
+
+    //打开空格
+    void spaceOpen(int x, int y) {
+        if (GameUtil.MAP_Mine[x][y] == 0) {
+            for (int i = x - 1; i <= x + 1; i++) {
+                for (int j = y - 1; j <= y + 1; j++) {
+                    //覆盖才递归
+                    if (GameUtil.MAP_Top[i][j] != -1) {
+                        GameUtil.MAP_Top[i][j] = -1;
+                        //必须在雷区当中
+                        if (i >= 1 && j >= 1 && i < GameUtil.MAP_W && j <= GameUtil.MAP_H) {
+                            spaceOpen(i, j);
+                        }
+                    }
+                }
             }
         }
     }
