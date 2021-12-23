@@ -45,6 +45,7 @@ public class MapTop {
             }
         }
         boom();
+        victory();
     }
 
 
@@ -160,5 +161,29 @@ public class MapTop {
                 }
             }
         }
+    }
+
+    //胜利判断true胜利
+    boolean victory() {
+        int count = 0;//统计未打开格子数
+        for (int i = 1; i <= GameUtil.MAP_W; i++) {
+            for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                if (GameUtil.MAP_Top[i][j] != -1) {
+                    count++;
+                }
+            }
+        }
+        if (count == GameUtil.Mine_Max) {
+            System.out.println("胜利");
+            for (int i = 1; i <= GameUtil.MAP_W; i++) {
+                for (int j = 1; j <= GameUtil.MAP_H; j++) {
+                    if (GameUtil.MAP_Top[i][j] == 0) {//未翻开的变成旗
+                        GameUtil.MAP_Top[i][j] = 1;
+                    }
+                }
+            }
+            return true;
+        }
+        return false;
     }
 }
