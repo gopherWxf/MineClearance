@@ -21,6 +21,7 @@ public class MapTop {
         if (temp_x >= 1 && temp_x <= GameUtil.MAP_W
                 && temp_y >= 1 && temp_y <= GameUtil.MAP_H) {
             if (GameUtil.MOUSE_LEFT == true) {
+                //覆盖，则翻开
                 if (GameUtil.MAP_Top[temp_x][temp_y] == 0) {
                     GameUtil.MAP_Top[temp_x][temp_y] = -1;
                 }
@@ -28,8 +29,14 @@ public class MapTop {
                 spaceOpen(temp_x, temp_y);
             }
             if (GameUtil.MOUSE_RIGHT == true) {
-                System.out.println(GameUtil.MOUSE_X);
-                System.out.println(GameUtil.MOUSE_Y);
+                //覆盖则插旗
+                if (GameUtil.MAP_Top[temp_x][temp_y] == 0) {
+                    GameUtil.MAP_Top[temp_x][temp_y] = 1;
+                }
+                //插旗则取消
+                else if (GameUtil.MAP_Top[temp_x][temp_y] == 1) {
+                    GameUtil.MAP_Top[temp_x][temp_y] = 0;
+                }
                 GameUtil.MOUSE_RIGHT = false;
             }
         }
