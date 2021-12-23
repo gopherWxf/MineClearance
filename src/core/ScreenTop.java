@@ -1,3 +1,8 @@
+package core;
+
+import util.UtilAPI;
+import util.UtilVar;
+
 import java.awt.*;
 
 public class ScreenTop {
@@ -203,7 +208,7 @@ public class ScreenTop {
     }
 
     //重置游戏
-    void reGame() {
+    public void reGame() {
 
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {

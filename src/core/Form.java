@@ -1,9 +1,13 @@
+package core;
+
+import util.UtilVar;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class GameWin extends JFrame {
+public class Form extends JFrame {
     ScreenBottom mapBottom = new ScreenBottom();
     ScreenTop mapTop = new ScreenTop();
     ScreenSelect gameSelect = new ScreenSelect();
@@ -13,7 +17,7 @@ public class GameWin extends JFrame {
 
     Image ScreenCache = null;
 
-    void launch() {
+    public void launch() {
         UtilVar.START_TIME = System.currentTimeMillis();
         this.setVisible(true);//设置窗口可见
         if (UtilVar.state == 3) {
@@ -88,7 +92,7 @@ public class GameWin extends JFrame {
             begin = false;
             gameSelect.hard(UtilVar.level);
             dispose();
-            GameWin gameWin = new GameWin();
+            Form gameWin = new Form();
             UtilVar.FLAG_NUM=0;
             UtilVar.START_TIME = System.currentTimeMillis();
             mapTop.reGame();

@@ -1,15 +1,25 @@
+package core;
+
+import Make.MakeBottomNum;
+import Make.MakeMines;
+import util.UtilAPI;
+import util.UtilVar;
+
 import java.awt.*;
 
 
 public class ScreenBottom {
     //地雷类
+
     MakeMines generateMine = new MakeMines();
     //地雷对应的数字
     MakeBottomNum bottomNum = new MakeBottomNum();
+
     {
         generateMine.newMine();
         bottomNum.newNum();
     }
+
     //绘制地图网格
     void paintSelf(Graphics graphics) {
         //设置线条颜色
@@ -43,7 +53,7 @@ public class ScreenBottom {
                     );
                 }
                 //数字
-                if (UtilVar.BottomData[i][j] >= 0) {
+                if (UtilVar.BottomData[i][j] >= 0 && UtilVar.BottomData[i][j] <= 9) {
                     graphics.drawImage(UtilVar.nums[UtilVar.BottomData[i][j]],
                             UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 15,
                             UtilVar.OFFSET * 3 + (j - 1) * UtilVar.LATTICE + 5,
@@ -62,7 +72,7 @@ public class ScreenBottom {
         //绘制倒计时
         UtilAPI.drawWord(graphics,
                 "开始扫雷:" + (UtilVar.END_TIME - UtilVar.START_TIME) / 1000 + "秒",
-                UtilVar.OFFSET + UtilVar.LATTICE * (UtilVar.MAP_W - 4),
+                UtilVar.OFFSET + UtilVar.LATTICE * (UtilVar.MAP_W - 4) + 50,
                 2 * UtilVar.OFFSET,
                 20, Color.red);
         //游戏状态图片显示
@@ -81,18 +91,20 @@ public class ScreenBottom {
                         null);
                 break;
             case 2:
-                //播放爆炸音效
-                UtilVar.voice++;
-                UtilAPI.play();
+
                 graphics.drawImage(UtilVar.over,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
                         UtilVar.OFFSET,
                         null);
+                //播放爆炸音效
+                UtilVar.voice++;
+                UtilAPI.play();
                 break;
         }
     }
+
     //重置游戏
-    void reGame() {
+    public void reGame() {
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 UtilVar.BottomData[i][j] = 0;

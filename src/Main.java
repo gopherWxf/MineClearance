@@ -1,5 +1,7 @@
+import core.Form;
+
 public class Main {
-    static GameWin gameWin = new GameWin();
+    static Form gameWin = new Form();
 
     public static void main(String[] args) {
         gameWin.launch();

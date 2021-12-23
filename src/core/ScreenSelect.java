@@ -1,13 +1,18 @@
+package core;
+
+import util.UtilAPI;
+import util.UtilVar;
+
 import java.awt.*;
 
 public class ScreenSelect {
     void paintSelf(Graphics g) {
         g.drawRect(100, 50, 300, 100);
-        UtilAPI.drawWord(g, "简单", 220, 100, 30, Color.black);
+        UtilAPI.drawWord(g, "简单", 220, 100, 30, Color.PINK);
         g.drawRect(100, 200, 300, 100);
-        UtilAPI.drawWord(g, "中等", 220, 250, 30, Color.black);
+        UtilAPI.drawWord(g, "中等", 220, 250, 30, Color.orange);
         g.drawRect(100, 350, 300, 100);
-        UtilAPI.drawWord(g, "困难", 220, 400, 30, Color.black);
+        UtilAPI.drawWord(g, "困难", 220, 400, 30, Color.red);
         g.drawRect(100, 500, 300, 100);
         int fast = UtilAPI.readRank();
         UtilAPI.drawWord(g, "历史扫雷最快:" + fast + "秒", 115, 550, 30, Color.black);

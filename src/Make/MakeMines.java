@@ -1,3 +1,7 @@
+package Make;
+
+import util.UtilVar;
+
 public class MakeMines {
     //存放坐标
     static int[] mines = new int[UtilVar.Mine_Max * 2];
@@ -6,7 +10,7 @@ public class MakeMines {
     //是否放置 true可放
     boolean isPlace = true;
 
-    void newMine() {
+    public void newMine() {
         for (int i = 0; i < UtilVar.Mine_Max * 2; i += 2) {
             x = (int) (Math.random() * UtilVar.MAP_W + 1);
             y = (int) (Math.random() * UtilVar.MAP_H + 1);

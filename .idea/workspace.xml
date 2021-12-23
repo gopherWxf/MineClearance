@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="汇总">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jlayer_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rank/rank.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jlayer-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScreenSelect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UtilAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voice/boom.mp3" afterDir="false" />
+    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="爆炸音效和最快排行">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MineClearance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MineClearance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameSelect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/GameWin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/GameWin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MineClearance/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeBottomNum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/MakeBottomNum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeMines.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/MakeMines.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenBottom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/ScreenBottom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenTop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/ScreenTop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameSelect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilVar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameWin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeBottomNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeMines.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenBottom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenTop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameWin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MakeBottomNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MakeBottomNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MakeMines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MakeMines.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenBottom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MakeBottomNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Make/MakeBottomNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MakeMines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Make/MakeMines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScreenBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenBottom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScreenSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScreenTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilVar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +70,8 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.Main">
-    <configuration name="GameWin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameWin" />
+    <configuration name="Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="core.Form" />
       <module name="MineClearance" />
       <extension name="coverage">
         <pattern>
@@ -101,7 +93,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Main" />
-        <item itemvalue="应用程序.GameWin" />
+        <item itemvalue="应用程序.Form" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640269450277</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="爆炸音效和最快排行">
+      <created>1640274288390</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640274288390</updated>
+    </task>
+    <task id="LOCAL-00023" summary="爆炸音效和最快排行">
+      <created>1640274371276</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1640274371276</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +307,8 @@
     <MESSAGE value="剩余雷数与计时" />
     <MESSAGE value="难度选择" />
     <MESSAGE value="汇总" />
-    <option name="LAST_COMMIT_MESSAGE" value="汇总" />
+    <MESSAGE value="爆炸音效和最快排行" />
+    <option name="LAST_COMMIT_MESSAGE" value="爆炸音效和最快排行" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

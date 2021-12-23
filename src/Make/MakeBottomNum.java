@@ -1,5 +1,9 @@
+package Make;
+
+import util.UtilVar;
+
 public class MakeBottomNum {
-    void newNum() {
+    public void newNum() {
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 if (UtilVar.BottomData[i][j] == -1) {
