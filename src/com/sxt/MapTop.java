@@ -6,19 +6,33 @@ package com.sxt;
 import java.awt.*;
 
 public class MapTop {
+    //格子位置
+    int temp_x;
+    int temp_y;
 
     //判断鼠标逻辑
     void logic() {
-        if (GameUtil.MOUSE_LEFT == true) {
-            System.out.println(GameUtil.MOUSE_X);
-            System.out.println(GameUtil.MOUSE_Y);
-            GameUtil.MOUSE_LEFT = false;
+        temp_x = 0;
+        temp_y = 0;
+        if (GameUtil.MOUSE_X > GameUtil.OFFSET && GameUtil.MOUSE_Y > 3 * GameUtil.OFFSET) {
+            temp_x = (GameUtil.MOUSE_X - GameUtil.OFFSET) / GameUtil.LatticeSideLength + 1;
+            temp_y = (GameUtil.MOUSE_Y - 3 * GameUtil.OFFSET) / GameUtil.LatticeSideLength + 1;
         }
-        if (GameUtil.MOUSE_RIGHT == true) {
-            System.out.println(GameUtil.MOUSE_X);
-            System.out.println(GameUtil.MOUSE_Y);
-            GameUtil.MOUSE_RIGHT = false;
+        if (temp_x >= 1 && temp_x <= GameUtil.MAP_W
+                && temp_y >= 1 && temp_y <= GameUtil.MAP_H) {
+            if (GameUtil.MOUSE_LEFT == true) {
+                if (GameUtil.MAP_Top[temp_x][temp_y] == 0) {
+                    GameUtil.MAP_Top[temp_x][temp_y] = -1;
+                }
+                GameUtil.MOUSE_LEFT = false;
+            }
+            if (GameUtil.MOUSE_RIGHT == true) {
+                System.out.println(GameUtil.MOUSE_X);
+                System.out.println(GameUtil.MOUSE_Y);
+                GameUtil.MOUSE_RIGHT = false;
+            }
         }
+
     }
 
 
