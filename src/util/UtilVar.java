@@ -5,8 +5,8 @@ import java.awt.*;
 public class UtilVar {
     public static int MAP_W = 36;//地图宽
     public static int MAP_H = 17;//地图高
-    public static int OFFSET = 45;//偏移量
-    public static int LATTICE = 50;//格子边长
+    public static int OFFSET = 25;//偏移量
+    public static int LATTICE = 45;//格子边长
     public static int[][] BottomData = new int[MAP_W + 2][MAP_H + 2];//地雷元素含义-1雷 0空 1-8对应的数字
     //载入地雷图片
     public static Image lei = Toolkit.getDefaultToolkit().getImage("images/lei.png");

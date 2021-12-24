@@ -55,9 +55,8 @@ public class ScreenBottom {
                 //数字
                 if (UtilVar.BottomData[i][j] >= 0 && UtilVar.BottomData[i][j] <= 9) {
                     graphics.drawImage(UtilVar.nums[UtilVar.BottomData[i][j]],
-                            UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 15,
+                            UtilVar.OFFSET + (i - 1) * UtilVar.LATTICE + 12,
                             UtilVar.OFFSET * 3 + (j - 1) * UtilVar.LATTICE + 5,
-
                             null
                     );
                 }
@@ -81,20 +80,20 @@ public class ScreenBottom {
                 UtilVar.END_TIME = System.currentTimeMillis();
                 graphics.drawImage(UtilVar.face,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET,
+                        UtilVar.OFFSET+5,
                         null);
                 break;
             case 1:
                 graphics.drawImage(UtilVar.win,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET,
+                        UtilVar.OFFSET+5,
                         null);
                 break;
             case 2:
 
                 graphics.drawImage(UtilVar.over,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET,
+                        UtilVar.OFFSET+5,
                         null);
                 break;
         }
