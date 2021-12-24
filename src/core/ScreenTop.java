@@ -155,6 +155,9 @@ public class ScreenTop {
                 if (UtilVar.BottomData[i][j] == -1 && UtilVar.TopData[i][j] == -1) {
                     UtilVar.state = 2;
                     seeBoom();
+                    //播放爆炸音效
+                    UtilVar.voice++;
+                    UtilAPI.play();
                     return true;
                 }
             }

@@ -40,7 +40,6 @@ public class UtilVar {
     public static Image over = Toolkit.getDefaultToolkit().getImage("images/over.png");
     //旗数量
     public static int FLAG_NUM = 0;
-
     //倒计时
     public static long START_TIME = 0;
     public static long END_TIME = 0;

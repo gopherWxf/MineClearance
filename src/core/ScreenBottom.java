@@ -96,9 +96,6 @@ public class ScreenBottom {
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
                         UtilVar.OFFSET,
                         null);
-                //播放爆炸音效
-                UtilVar.voice++;
-                UtilAPI.play();
                 break;
         }
     }

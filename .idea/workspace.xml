@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="爆炸音效和最快排行">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/GameWin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MineClearance/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeBottomNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/MakeMines.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenBottom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/ScreenTop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameWin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MakeBottomNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Make/MakeBottomNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MakeMines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Make/MakeMines.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenBottom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenTop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilVar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ScreenBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenBottom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ScreenTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/UtilAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/UtilVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UtilVar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640249467956</updated>
       <workItem from="1640249469150" duration="11363000" />
+      <workItem from="1640316380209" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="窗口绘制">
       <created>1640249864764</created>
@@ -268,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640274371276</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="爆炸音效和最快排行">
+      <created>1640275427253</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1640275427253</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +281,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
