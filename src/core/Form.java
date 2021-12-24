@@ -1,6 +1,5 @@
 package core;
 
-import util.UtilAPI;
 import util.UtilVar;
 
 import javax.swing.*;
@@ -61,7 +60,7 @@ public class Form extends JFrame {
                                 mapTop.reGame();
                                 UtilVar.state = 0;
                                 UtilVar.FLAG_NUM = 0;
-                                UtilVar.voice=0;
+                                UtilVar.voice = 0;
                                 UtilVar.START_TIME = System.currentTimeMillis();
                             }
                         }
@@ -94,7 +93,7 @@ public class Form extends JFrame {
             gameSelect.hard(UtilVar.level);
             dispose();
             Form gameWin = new Form();
-            UtilVar.FLAG_NUM=0;
+            UtilVar.FLAG_NUM = 0;
             UtilVar.START_TIME = System.currentTimeMillis();
             mapTop.reGame();
             mapBottom.reGame();

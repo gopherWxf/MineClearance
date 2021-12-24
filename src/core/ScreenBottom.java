@@ -10,7 +10,6 @@ import java.awt.*;
 
 public class ScreenBottom {
     //地雷类
-
     MakeMines generateMine = new MakeMines();
     //地雷对应的数字
     MakeBottomNum bottomNum = new MakeBottomNum();
@@ -80,20 +79,20 @@ public class ScreenBottom {
                 UtilVar.END_TIME = System.currentTimeMillis();
                 graphics.drawImage(UtilVar.face,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET+5,
+                        UtilVar.OFFSET + 5,
                         null);
                 break;
             case 1:
                 graphics.drawImage(UtilVar.win,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET+5,
+                        UtilVar.OFFSET + 5,
                         null);
                 break;
             case 2:
 
                 graphics.drawImage(UtilVar.over,
                         UtilVar.OFFSET + UtilVar.LATTICE * UtilVar.MAP_W / 2,
-                        UtilVar.OFFSET+5,
+                        UtilVar.OFFSET + 5,
                         null);
                 break;
         }
