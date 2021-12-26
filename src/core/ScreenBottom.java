@@ -9,9 +9,9 @@ import java.awt.*;
 
 
 public class ScreenBottom {
-    //地雷类
+    //生成地雷
     MakeMines generateMine = new MakeMines();
-    //地雷对应的数字
+    //生成地雷旁边的数字
     MakeBottomNum bottomNum = new MakeBottomNum();
 
     {
@@ -19,7 +19,7 @@ public class ScreenBottom {
         bottomNum.newNum();
     }
 
-    //绘制地图网格
+    //绘制
     void paintSelf(Graphics graphics) {
         //设置线条颜色
         graphics.setColor(Color.red);
@@ -38,7 +38,7 @@ public class ScreenBottom {
                     3 * UtilVar.OFFSET + i * UtilVar.LATTICE
             );
         }
-        //画地雷
+        //画地雷和数字
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 //地雷

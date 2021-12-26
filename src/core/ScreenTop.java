@@ -20,7 +20,7 @@ public class ScreenTop {
         }
         if (temp_x >= 1 && temp_x <= UtilVar.MAP_W
                 && temp_y >= 1 && temp_y <= UtilVar.MAP_H) {
-            if (UtilVar.MOUSE_LEFT) {
+            if (UtilVar.MOUSE_LEFT) {//左键
                 //覆盖，则翻开
                 if (UtilVar.TopData[temp_x][temp_y] == 0) {
                     UtilVar.TopData[temp_x][temp_y] = -1;
@@ -28,7 +28,7 @@ public class ScreenTop {
                 UtilVar.MOUSE_LEFT = false;
                 spaceOpen(temp_x, temp_y);
             }
-            if (UtilVar.MOUSE_RIGHT) {
+            if (UtilVar.MOUSE_RIGHT) {//右键
                 //覆盖则插旗
                 if (UtilVar.TopData[temp_x][temp_y] == 0) {
                     UtilVar.TopData[temp_x][temp_y] = 1;
@@ -50,11 +50,11 @@ public class ScreenTop {
         victory();
     }
 
-
-    //绘制上层
+    //绘制
     void paintSelf(Graphics graphics) {
+        //先进行逻辑判断
         logic();
-        //画覆盖
+        //绘制
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 //有覆盖
@@ -87,12 +87,11 @@ public class ScreenTop {
                             null
                     );
                 }
-
             }
         }
     }
 
-    //打开空格
+    //递归打开空格
     void spaceOpen(int x, int y) {
         if (UtilVar.BottomData[x][y] == 0) {
             for (int i = x - 1; i <= x + 1; i++) {
@@ -212,7 +211,6 @@ public class ScreenTop {
 
     //重置游戏
     public void reGame() {
-
         for (int i = 1; i <= UtilVar.MAP_W; i++) {
             for (int j = 1; j <= UtilVar.MAP_H; j++) {
                 UtilVar.TopData[i][j] = 0;
@@ -220,3 +218,7 @@ public class ScreenTop {
         }
     }
 }
+
+
+
+
