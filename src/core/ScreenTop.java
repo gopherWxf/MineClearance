@@ -144,7 +144,7 @@ public class ScreenTop {
         if (UtilVar.FLAG_NUM == UtilVar.Mine_Max) {
             for (int i = 1; i <= UtilVar.MAP_W; i++) {
                 for (int j = 1; j <= UtilVar.MAP_H; j++) {
-                    if (UtilVar.BottomData[i][j] == 0) {
+                    if (UtilVar.TopData[i][j] == 0) {
                         UtilVar.TopData[i][j] = -1;
                     }
                 }
