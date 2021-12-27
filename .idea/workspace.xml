@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="debug">
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+    <list default="true" id="5d5478a1-39dc-42b9-9a3c-25d30476ceb1" name="更改" comment="最终版">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rank/rank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Rank/rank.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Make/MakeBottomNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Make/MakeBottomNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ScreenBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenBottom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ScreenSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ScreenTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ScreenTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MineClearance/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
@@ -64,13 +59,26 @@
       <recent name="Main" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Main">
+  <component name="RunManager" selected="应用程序.Main (1)">
     <configuration name="Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="core.Form" />
       <module name="MineClearance" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="MineClearance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Main (1)" />
         <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.Form" />
       </list>
@@ -104,7 +113,9 @@
       <workItem from="1640316380209" duration="835000" />
       <workItem from="1640317750307" duration="1520000" />
       <workItem from="1640505880745" duration="1362000" />
-      <workItem from="1640510804613" duration="10542000" />
+      <workItem from="1640510804613" duration="11411000" />
+      <workItem from="1640568156254" duration="51000" />
+      <workItem from="1640588540728" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="窗口绘制">
       <created>1640249864764</created>
@@ -302,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640507218669</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="最终版">
+      <created>1640521889876</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1640521889876</updated>
+    </task>
+    <task id="LOCAL-00030" summary="最终版">
+      <created>1640521936056</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1640521936056</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +369,8 @@
     <MESSAGE value="汇总" />
     <MESSAGE value="爆炸音效和最快排行" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="最终版" />
+    <option name="LAST_COMMIT_MESSAGE" value="最终版" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
